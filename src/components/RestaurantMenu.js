@@ -5,7 +5,7 @@ import RestaurantCategory from "./RestaurantCategory";
 import { useState } from "react";
 const RestaurantMenu = () => {
   const { resId } = useParams();
-  console.log("Burger King Id", resId);
+  //console.log("Burger King Id", resId);
   const resInfo = useRestaurantMenu(resId);
   const [showIndex,setShowIndex]=useState(null);
 
@@ -28,7 +28,7 @@ const RestaurantMenu = () => {
         cat.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-  //console.log("categories id",categories);
+  console.log("categories id",categories);
 
   if (itemCards === undefined) {
     return <Shimmer />;

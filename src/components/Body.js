@@ -10,7 +10,7 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
   const onlinestatus = useOnline();
-  console.log("Body rendered",listOfRestaurants);
+  //console.log("Body rendered",listOfRestaurants);
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Body = () => {
     );
     const json = await data.json();
 
-    console.log("jsondata", json);
+    //console.log("jsondata", json);
 
     setlistOfRestaurants(
       json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
