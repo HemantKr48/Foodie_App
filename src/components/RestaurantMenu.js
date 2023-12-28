@@ -7,6 +7,7 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
   //console.log("Burger King Id", resId);
   const resInfo = useRestaurantMenu(resId);
+  console.log("resInfo",resInfo);
   const [showIndex,setShowIndex]=useState(null);
 
   if (resInfo === null) {
@@ -35,7 +36,7 @@ const RestaurantMenu = () => {
   }
 
   return (
-    <div className="text-center">
+    <div className="text-center md:m-2">
       <h1 className="font-bold my-6 text-2xl">{name}</h1>
       <p className="font-bold text-lg">
         {cuisines}-Rs{costForTwo}

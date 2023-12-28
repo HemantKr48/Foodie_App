@@ -23,13 +23,13 @@ const Body = () => {
     );
     const json = await data.json();
 
-    //console.log("jsondata", json);
+    console.log("jsondata", json);
 
     setlistOfRestaurants(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurant(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
   function filterTopRatedRestaurants() {
@@ -43,7 +43,7 @@ const Body = () => {
   return listOfRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
-    <div>
+    <div className="md:my-10 my-56  ">
       <div className=" flex m-3">
         <div className="">
           <input
@@ -80,9 +80,9 @@ const Body = () => {
         </button>
       </div>
 
-      <div className="flex  justify-center flex-wrap ">
-        {filteredRestaurant.map((restaurant) => (
-          <Link
+      <div className="grid 2xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1   gap-10 mx-10 ">
+        {filteredRestaurant?.map((restaurant) => (
+          <Link className="h-full"
             key={restaurant?.info?.id}
             to={"/restaurants/" + restaurant?.info?.id}
           >

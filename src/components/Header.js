@@ -12,10 +12,10 @@ const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
 
   return (
-    <div className="flex justify-between   bg-gray-300 shadow-lg m-2  ">
+    <div className="md:flex fixed top-0 left-0 right-0 z-10  justify-between   bg-gray-300 shadow-lg  ">
       <img className="w-40" alt="logo" src={LOGO_URL} />
-      <div className="flex items-center">
-        <ul className="flex p-4 m-4 ">
+      <div className="md:flex items-center">
+        <ul className="md:flex p-4 m-4 ">
           <li className="px-2">OnlineStatus:{onlinestatus ? "🟢" : "🔴"}</li>
           <li className="px-2">
             <Link to="/grocery">Grocery</Link>

@@ -20,7 +20,7 @@ function App() {
     <Provider store={appStore}>
       <UserContext.Provider value={{ loggedInUser: username }}>
         <div className="App">
-          <Header />
+          <Header/>
           <Outlet />
           <Footer />
         </div>
