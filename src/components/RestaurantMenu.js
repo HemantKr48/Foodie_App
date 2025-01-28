@@ -36,9 +36,9 @@ const RestaurantMenu = () => {
   }
 
   return (
-    <div className="text-center md:m-2">
+    <div className="text-center md:m-2 mt-20 ">
       <h1 className="font-bold my-6 text-2xl">{name}</h1>
-      <p className="font-bold text-lg">
+      <p className="font-bold text-lg ">
         {cuisines}-Rs{costForTwo}
       </p>
       {categories.map((category,index) => (
